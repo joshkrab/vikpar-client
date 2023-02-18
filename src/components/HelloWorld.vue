@@ -56,8 +56,15 @@ export default {
       }
 
       try {
+        // const response = await axios.post(
+        //   'https://vikpar.herokuapp.com/api/vikpar',
+        //   {
+        //     url: this.firstUrl,
+        //     pageCount: this.pageCount || 1,
+        //   },
+        // );
         const response = await axios.post(
-          'https://vikpar.herokuapp.com/api/vikpar',
+          'http://localhost:8000/api/vikpar',
           {
             url: this.firstUrl,
             pageCount: this.pageCount || 1,
