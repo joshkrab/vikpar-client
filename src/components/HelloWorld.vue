@@ -76,7 +76,7 @@ export default {
         // eslint-disable-next-line no-unused-expressions
         data
           ? (this.output = 'Successfully')
-          : (this.output = 'Something wrong...');
+          : (this.output = 'No responce: Something wrong...');
 
         if (data) {
           const XLSX = xlsx;
@@ -88,7 +88,8 @@ export default {
         this.showLoader = ['hide'];
         return;
       } catch (error) {
-        this.output = 'Something wrong...';
+        console.log(error.message);
+        this.output = 'Catch: Something wrong...';
         this.showLoader = ['hide'];
       }
     },
